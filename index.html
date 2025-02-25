@@ -1,41 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Css Card Uy ishi</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Welcome to Italy</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			background-color: #1e1f21;
+		}
+
+		header {
+			width: 100%;
+			height: 500px;
+			background: url('img/italy.jpg') no-repeat center center/cover;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+			font-size: 2rem;
+			font-weight: bold;
+			position: relative;
+			transition: 0.3s ease-in-out;
+			font-family: 'Times New Roman', Times, serif;
+		}
+
+		header::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0);
+			transition: background 0.3s ease-in-out;
+		}
+
+		header:hover::after {
+			background: rgba(0, 0, 0, 0.2);
+		}
+		@media (max-width: 768px) {
+    header {
+        height: 300px; /* Telefon uchun qisqaroq qilish */
+        font-size: 1.5rem; /* Matnni kichikroq qilish */
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+	</style>
 </head>
+
 <body>
-    <div class="card-area">
-        <div class="wrapper">
-            <div class="box-area">
-                <div class="box">
-                    <img src="img/6.jpg" alt="img error">
-                    <div class="overlay">
-                        <h3>Mountaineering</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam minus, quasi placeat dolor maxime.</p>
-                        <a href="">Book Now</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="img/7.jpg" alt="img error">
-                    <div class="overlay">
-                        <h3>Scuba Diving</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam minus, quasi placeat dolor maxime.</p>
-                        <a href="">Book Now</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="img/5.jpg" alt="img error">
-                    <div class="overlay">
-                        <h3>Travel World</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam minus, quasi placeat dolor maxime.</p>
-                        <a href="">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<header>
+		Welcome to the place I’m going to – Italy!
+	</header>
+	<div class="card-area">
+		<h1 class="section-title" title="Diqqatga sazovor joylar">Sightseeing</h1>
+		<div class="wrapper">
+			<div class="box-area">
+				<div class="box">
+					<img src="img/rim 2.jpg" alt="img error">
+					<div class="overlay">
+						<h3>Colosseum</h3>
+						<p>Bu dunyoning eng mashhur amfiteatri bo‘lib, qadimgi Rim imperiyasining eng katta
+							inshootlaridan biri hisoblanadi.</p>
+						<a href="colosseum.html">Ma'lumotlar</a>
+					</div>
+				</div>
+				<div class="box">
+					<img src="img/Venice 2.jpg" alt="img error">
+					<div class="overlay">
+						<h3>Venice</h3>
+						<p>Venetsiya – suv ustiga qurilgan shahar bo‘lib, undagi mashhur Gran Kanali, gondolalari va
+							tarixiy me’moriy obidalari bilan tanilgan.</p>
+						<a href="venice.html">Ma'lumotlar</a>
+					</div>
+				</div>
+				<div class="box">
+					<img src="img/Leaning Tower of Pisa.jpg" alt="img error">
+					<div class="overlay">
+						<h3>Leaning Tower of Pisa</h3>
+						<p>Piza minorasi o‘zining qiyshaygan holati bilan mashhur bo‘lib, 1173-yilda qurilgan va
+							mustahkamlash ishlari tufayli hanuzgacha saqlanib qolgan.</p>
+						<a href="pisa.html">Ma'lumotlar</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<style>
+			.section-title {
+				font-family: 'Times New Roman', Times, serif;
+				text-align: center;
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 0 auto 20px auto;
+				color: #fff;
+				position: relative;
+				display: block;
+				width: max-content;
+				cursor: pointer;
+			}
+
+
+			.section-title::after {
+				content: "Diqqatga sazovor joylar";
+				position: absolute;
+				left: 50%;
+				bottom: -30px;
+				transform: translateX(-50%);
+				background: rgba(255, 255, 255, 0.8);
+				color: rgb(0, 0, 0);
+				padding: 5px 10px;
+				font-size: 14px;
+				border-radius: 5px;
+				width: max-content;
+				text-align: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease-in-out;
+			}
+
+
+			.section-title:hover::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		</style>
+	</div>
+	<div class="video-section">
+		<h2>🎥 Italy Nature Video</h2>
+		<iframe 
+			width="100%" 
+			height="450" 
+			src="https://www.youtube.com/embed/MuYy0pt-VuU" 
+			title="Italy Travel Video" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+		</iframe>
+	</div>
+	
+	
+	<style>
+		.video-section {
+			text-align: center;
+			margin: 50px auto;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 10px;
+			max-width: 1200px;
+		}
+	
+		.video-section h2 {
+			color: #fff;
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+			font-family: 'Times New Roman', Times, serif;
+		}
+	
+		.video-section iframe {
+			max-width: 1200px;
+			height: 450px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+		}
+	
+		@media (max-width: 768px) {
+			.video-section iframe {
+				height: 300px;
+			}
+		}
+	</style>
+
+<div class="why-italy">
+    <h2>Nega men aynan Italiyani tanladim?</h2>
+    <p>
+        Menga qadimiy joylar juda yoqadi! 🏛️ Italiya esa tarixiy obidalar, betakror me’moriy yodgorliklar va san’at durdonalari bilan to‘la bir mo‘jiza! 🎭  
+        Bundan tashqari, Italiya – nafaqat tarix, balki lazzatli taomlar yurti hamdir! 🍕 
+        Dunyoning eng mazali Pizzasi ham shu yerda tayyorlanadi va men bu lazzatdan zavqlanmaslikni tasavvur ham qila olmayman! 😋   
+        Shu sababli men aynan Italiyani tanladim! ✨
+    </p>
+</div>
+
+<style>
+    .why-italy {
+        text-align: center;
+        margin: 40px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        max-width: 1200px;
+    }
+
+    .why-italy h2 {
+        color: #fff;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .why-italy p {
+        color: #ddd;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+	
 </body>
+
 </html>
